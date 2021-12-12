@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="functions.js" defer></script>
+</head>
+<body>
+    <h1>COOPER'S LIBRARY</h1>
+    <button onclick = "revealForm()" class="addButton">Add New Book</button>
+    <button onclick = "revertPage()" class="backButton" style="display: none;">Back</button>
+
+    <form class = "form" id="formElement" style="display: none;">
+        <label for = "title">
+            <input type="text" id="title" name="bookTitle" placeholder="Title" required oninvalid="this.setCustomValidity('Please enter a title.')"
+            oninput="this.setCustomValidity('')">
+        </label>
+
+        <label for = "author">
+            <input type="text" id="author" name="bookAuthor" placeholder="Author" required oninvalid="this.setCustomValidity('Please specify an author.')"
+            oninput="this.setCustomValidity('')">
+        </label>
+
+        <label for = "pages">
+            <input type="number" id="pages" name="bookPages" placeholder="Pages" required oninvalid="this.setCustomValidity('Please specify a number of pages.')"
+            oninput="this.setCustomValidity('')">
+        </label>
+
+        <label for = "read">Read this book?:
+            <input type="checkbox" id="read" name="readBook">
+        </label>
+
+        <div class="formButtons">
+            <button class="submitButton" type="submit">Submit</button> 
+                
+            <button class="clearButton" type="reset">Reset</button>
+        </div>
+    </form>
+
+    <div class="libWrapper">
+        <div class="library"></div>
+    </div>
+</body>
+</html>
