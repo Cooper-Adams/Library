@@ -1,20 +1,26 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read)
+class Book 
 {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+    constructor(title, author, pages, read)
+    {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 
-    this.info = function() {
-
+    info() {
+        
         if (read == true)
         {
             return title + ' by ' + author + ', ' + pages + ' pages, ' + ' have read';
         }
 
-        return title + ' by ' + author + ', ' + pages + ' pages, ' + ' have not read yet';
+        else
+        {
+            return title + ' by ' + author + ', ' + pages + ' pages, ' + ' have not read yet';
+        }
     }
 }
 
